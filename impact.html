@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshSave | Impact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Fresh<span>Save</span></a>
+      <nav class="nav-links">
+      <a href="index.html" class="">Home</a>
+      <a href="tracker.html" class="">Tracker</a>
+      <a href="recipes.html" class="">Recipes</a>
+      <a href="impact.html" class="active">Impact</a>
+      <a href="about.html" class="">About</a>
+    </nav>
+      <a class="nav-cta" href="tracker.html">Get Started</a>
+    </div>
+  </header>
+  
+<main class="container">
+  <section class="page-hero">
+    <h1>Impact Dashboard</h1>
+    <p>See the value of your choices through food saved, money saved, and meals rescued.</p>
+  </section>
+
+  <section class="section" style="padding-top:24px;">
+    <div class="stats-grid">
+      <article class="stat-card">
+        <h3 id="itemsTracked">0</h3>
+        <p>Items Tracked</p>
+      </article>
+      <article class="stat-card">
+        <h3 id="wastePrevented">0 kg</h3>
+        <p>Waste Prevented</p>
+      </article>
+      <article class="stat-card">
+        <h3 id="moneySaved">$0</h3>
+        <p>Money Saved</p>
+      </article>
+      <article class="stat-card">
+        <h3 id="mealsRescued">0</h3>
+        <p>Meals Rescued</p>
+      </article>
+    </div>
+
+    <div class="glass-card" style="margin-top:26px;">
+      <h3 style="margin-bottom:10px;">Live Summary</h3>
+      <p id="impactSummary" class="muted">Start tracking food to see your savings and environmental impact.</p>
+    </div>
+
+    <div class="grid-3" style="margin-top:24px;">
+      <article class="card">
+        <div class="icon">💸</div>
+        <h3>Financial Benefit</h3>
+        <p>Preventing waste also means keeping more of your grocery budget.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🌍</div>
+        <h3>Environmental Impact</h3>
+        <p>Using food efficiently reduces unnecessary landfill waste.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🍽️</div>
+        <h3>Meal Rescue</h3>
+        <p>One tracked ingredient can become a full useful meal instead of trash.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <a class="brand" href="index.html">Fresh<span>Save</span></a>
+      <p>Reducing food waste, one meal at a time.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
