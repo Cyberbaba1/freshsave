@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FreshSave | Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header"><div class="container navbar"><a class="brand" href="index.html">Fresh<span>Save</span></a><nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tracker.html" class="active">Tracker</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="impact.html">Impact</a>
+        <a href="diets.html">Diets</a>
+        <a href="about.html">About</a>
+      </nav><a class="nav-cta" href="tracker.html">Get Started</a></div></header>
+
+<main class="container"><section class="page-hero"><h1>Tracker Dashboard</h1><p>Add ingredients, filter urgent items, and manage everything from one clean dashboard with a larger food database.</p></section>
+<section class="section" style="padding-top:24px;"><div class="two-col"><div class="panel"><h3>Add Food Item</h3><div class="form-stack"><input type="text" id="foodName" placeholder="Food name" list="foodSuggestions"><datalist id="foodSuggestions"></datalist><input type="date" id="expiryDate"><select id="category"><option value="Auto">Auto detect category</option><option value="Vegetable">Vegetable</option><option value="Fruit">Fruit</option><option value="Dairy">Dairy</option><option value="Protein">Protein</option><option value="Grain">Grain</option><option value="Bakery">Bakery</option><option value="Condiment">Condiment</option><option value="Other">Other</option></select><button class="btn" onclick="addFood()">Add Item</button><p class="helper-note">Start typing to see ingredient suggestions. The database covers Arabic, Western, Chinese-inspired, Spanish, Mexican, and global ingredients.</p><div class="quick-tags"><span class="quick-tag">Arabic: shawarma, freekeh, zaatar</span><span class="quick-tag">Western: cheddar, oats, salmon</span><span class="quick-tag">Chinese: bok choy, hoisin sauce, ramen</span><span class="quick-tag">Spanish/Mexican: chorizo, saffron, avocado, black beans</span></div><div class="db-banner"><strong><span id="dbCount">0</span> ingredients</strong> available for suggestions and recipe matching.</div></div></div>
+<div class="panel"><h3>Tracked Items</h3><div class="toolbar"><input type="text" id="searchInput" placeholder="Search food..." oninput="renderFoods()"><button class="filter-btn active" id="filter-all" onclick="setFilter('all')">All</button><button class="filter-btn" id="filter-urgent" onclick="setFilter('urgent')">Urgent</button><button class="filter-btn" id="filter-fresh" onclick="setFilter('fresh')">Fresh</button></div><div class="food-list" id="foodList"></div></div></div></section>
+    <section class="section" style="padding-top:0;">
+      <div class="panel">
+        <div class="tracker-preview-head">
+          <div>
+            <h3>Recipes based on what you are tracking</h3>
+            <p class="muted">These update from your tracked foods automatically.</p>
+          </div>
+          <a class="btn" href="recipes.html">Open full recipes page</a>
+        </div>
+        <div class="mini-recipes-grid" id="trackerRecipePreview"></div>
+      </div>
+    </section>
+
+</main>
+
+<footer class="site-footer"><div class="container footer-wrap"><a class="brand" href="index.html">Fresh<span>Save</span></a><p>Reducing food waste, one meal at a time.</p></div></footer>
+<script src="app.js"></script></body></html>

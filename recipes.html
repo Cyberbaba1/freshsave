@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FreshSave | Recipes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header"><div class="container navbar"><a class="brand" href="index.html">Fresh<span>Save</span></a><nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="recipes.html" class="active">Recipes</a>
+        <a href="impact.html">Impact</a>
+        <a href="diets.html">Diets</a>
+        <a href="about.html">About</a>
+      </nav><a class="nav-cta" href="tracker.html">Get Started</a></div></header>
+
+<main class="container"><section class="page-hero"><h1>Recipe Library</h1><p>Browse recipes by cuisine or diet, then open full recipe pages with nutrition, ingredients, and how-to steps.</p></section>
+<section class="section" style="padding-top:24px;"><div class="panel"><h3>Browse all recipes</h3><div class="toolbar"><input type="text" id="recipeSearch" placeholder="Search recipes or ingredients..." oninput="renderRecipeCatalog()"><select id="cuisineFilter" onchange="renderRecipeCatalog()"></select><select id="dietFilter" onchange="renderRecipeCatalog()"></select></div><div class="recipes-grid" id="recipesCatalog"></div></div>
+<div class="glass-card cta-banner" style="margin-top:28px;"><div><h3 style="margin-bottom:8px;">Match recipes from your tracked foods</h3><p class="muted">This section reads the foods you added on the tracker page.</p></div><button class="btn" onclick="matchRecipes()">Match Recipes From My Food</button></div><div class="matches-grid" id="recipeMatches" style="margin-top:22px;"></div></section></main>
+
+<footer class="site-footer"><div class="container footer-wrap"><a class="brand" href="index.html">Fresh<span>Save</span></a><p>Reducing food waste, one meal at a time.</p></div></footer>
+<script src="app.js"></script></body></html>
